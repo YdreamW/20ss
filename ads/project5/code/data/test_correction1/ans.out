@@ -1,0 +1,14 @@
+The height of program1 is:  24
+The time of program1 is:  0.0
+The rectangles and their locations:
+[[1, 7], [3, 6], [2, 5], [1, 4], [1, 4], [3, 4], [2, 3], [3, 3], [3, 2]]
+[[0, 0], [1, 0], [0, 7], [2, 7], [3, 7], [0, 12], [0, 16], [0, 19], [0, 22]]
+
+
+The height of program2 is:  24
+The time of program2 is:  0.0
+The rectangles and their locations:
+[[1, 7], [3, 6], [2, 5], [1, 4], [1, 4], [3, 4], [2, 3], [3, 3], [3, 2]]
+[[0, 0], [1, 0], [0, 7], [2, 7], [3, 7], [0, 12], [0, 16], [0, 19], [0, 22]]
+
+

@@ -1,0 +1,12 @@
+The ans of program O(N^2) is:  962461674
+The time of program O(N^2) is:  0.05684471130371094
+
+
+The ans of program O(N*M) is:  962461674
+The time of program O(N*M) is:  0.002991199493408203
+
+
+The ans of program O(N*logN) is:  962461674
+The time of program O(N*logN) is:  0.007978200912475586
+
+

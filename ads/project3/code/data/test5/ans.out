@@ -1,0 +1,12 @@
+The ans of program O(N^2) is:  11
+The time of program O(N^2) is:  0.0009968280792236328
+
+
+The ans of program O(N*M) is:  11
+The time of program O(N*M) is:  0.0
+
+
+The ans of program O(N*logN) is:  11
+The time of program O(N*logN) is:  0.000997781753540039
+
+
