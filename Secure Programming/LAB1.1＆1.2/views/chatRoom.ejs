@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <title>浙江大学聊天室</title>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+    <body>
+        <div class="row" id="chat">
+            <div class="center container">
+                <div class="row" style="margin: 0;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td class="show-on-desktop" style="width: 45%; margin-left: 20px; vertical-align: top;">
+                                <!-- 左边的聊天室列表 -->
+
+                                <div>
+                                    <div style="height: 100%; overflow: auto;">
+                                        <table id="channelist"></table>
+                                    </div>
+                                </div>
+
+                                <h3 onclick="add_channel()" style="margin: 6px; font-size: 20px; cursor: pointer; color: gray;">+ 创建新频道</h3>
+                            </td>
+
+                            <td style="width: 65%;">
+                                <!-- 右边的聊天室 -->
+                                <div id="channel_title">
+                                    <h2>default channel</h2>
+                                </div>
+                                <div class="chatdiv" id="chatdiv"></div>
+                                <div>
+                                    <form id="chatForm">
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td style="width: 80%;">
+                                                    <input name="msg" style="padding: 10px 5px; font-size: 14px;" id="msg" type="text" class="validate" required />
+                                                </td>
+                                                <td style="width: 20%;">
+                                                    <button type="button" style="width: 100%; cursor: pointer;" class="button" name="action" onclick="add_msg()">
+                                                        发送
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="profile">
+            <div class="center container">
+                <div class="row">
+                    <table>
+                        <tr>
+                            <td style="width: 50%;">
+                                <h1 style="font-weight: bold;">个人资讯</h1>
+                                <table style="margin-top: 30px; margin-bottom: 30px;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding-right: 20px;">真实姓名</td>
+                                            <td>
+                                                <%= Tname %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>学号</td>
+                                            <td>
+                                                <%= student_num %>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding-right: 40px;">用户名</td>
+                                            <td>
+                                                <%= usr_name%>
+                                            </td>
+                                        </tr>
+                                        <tr id="fakepwd">
+                                            <td>密码</td>
+                                            <td style="cursor: pointer;" onclick="showpwd()">***********</td>
+                                        </tr>
+                                        <tr id="realpwd" style="display: none;">
+                                            <td>密码</td>
+                                            <td style="cursor: pointer;" onclick="hidepwd()"></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><button style="margin-top: 20px; cursor: pointer;" class="button" onclick="logout()">登出</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                            <td class="show-on-desktop" style="width: 50%;">
+                                <!-- 右边的图片 -->
+                                <img src="images/data.png" style="width: 100%;" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/chatRoom.js"></script>
+        <script>
+            const t = setInterval(update_channellist, 1000);
+            const t2 = setInterval(update_chat, 1000);
+        </script>
+    </body>
+</html>

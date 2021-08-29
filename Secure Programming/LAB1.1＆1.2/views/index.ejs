@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <title>浙江大学聊天室</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+  <script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div class="row" style="text-align: center">
+    <h1 style="color: white">浙江大学聊天室</h1>
+  </div>
+  <!-- 登入页面 -->
+  <div class="row" id="login">
+    <div class="center container">
+      <div class="row">
+        <table>
+          <tr>
+            <td style="width: 50%">
+              <div style="margin-top: 5%">
+                <!-- 登入表单 -->
+                <form style="float: left" id="loginForm" class="col s12 m5">
+                  <h1 style="font-weight: bold;">您尚未登入</h1>
+                  <h3>我们有了您而更加精彩</h3>
+                  <table>
+                    <tr style="height: 50px">
+                      <td style="padding-right: 10px"><label for="id">用户名</label></td>
+                      <td><input name="id" id="id" type="text" class="validate" required></td>
+                    </tr>
+                    <tr style="height: 30px">
+                      <td style="padding-right: 10px"><label for="pwd">密码</label></td>
+                      <td><input name="pwd" id="pwd" type="password" class="validate" required>
+                      </td>
+                    </tr>
+                    <tr style="height: 50px">
+                      <td colspan="2"><input name="keeplogin" id="keeplogin" type="checkbox"/><span>维持登入状态</span></td>
+                    </tr>
+                  </table>
+                  <button type="submit" class="button" style="cursor:pointer" name="action">登入</button>
+                  <p>或是现在<a onclick="open_reg()"
+                      style="cursor: pointer; color:cadetblue; margin-left: 5px; margin-right: 5px">加入我们</a>来使用更多服务。
+                  </p>
+                </form>
+              </div>
+            </td>
+            <td class="show-on-desktop" style="width: 50%">
+              <!-- 右边的登入图片 -->
+              <img src="images/login.png" style="width: 100%" />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 注册页面 -->
+  <div class="row" id="register">
+    <div class="center container">
+      <div class="row">
+        <table>
+          <tr>
+            <td style="width: 50%">
+              <form style="float: left" id="registerForm" class="col s12 m5">
+                <h1 style="font-weight: bold;">热烈地欢迎您</h1>
+                <h3>只需要简单填写几个资料<br>即可登入聊天广场。</h3>
+                <table>
+                  <tr style="height: 30px">
+                    <td style="padding-right: 10px"><label for="reg_name">真实姓名</label></td>
+                    <td><input name="reg_name" id="reg_name" type="text" class="validate" required>
+                    </td>
+                  </tr>
+                  <tr style="height: 30px">
+                    <td style="padding-right: 10px"><label for="reg_schoolnumber">学号</label></td>
+                    <td><input name="reg_schoolnumber" id="reg_schoolnumber" type="text" class="validate" required>
+                    </td>
+                  </tr>
+                  <tr style="height: 30px">
+                    <td style="padding-right: 10px"><label for="reg_id">用户名</label></td>
+                    <td><input name="reg_id" id="reg_id" type="text" class="validate" required></td>
+                  </tr>
+                  <tr style="height: 30px">
+                    <td style="padding-right: 10px"><label for="reg_pwd">密码</label></td>
+                    <td><input name="reg_pwd" id="reg_pwd" type="password" class="validate" required>
+                    </td>
+                  </tr>
+                  <tr style="height: 30px">
+                    <td style="padding-right: 10px"><label for="reg_checkpwd">再次输入密码</label></td>
+                    <td><input name="reg_checkpwd" id="reg_checkpwd" type="password" class="validate" required>
+                    </td>
+                  </tr>
+                </table>
+                <button  style="margin: 15px 0" class="button" style="cursor:pointer"
+                  name="action">注册</button>
+                <p>已经有帐号了？ 马上<a onclick="open_login()"
+                    style="cursor: pointer; color:cadetblue; margin-left: 5px; margin-right: 5px">登入</a>聊天广场。
+                </p>
+              </form>
+
+            </td>
+            <td class="show-on-desktop" style="width: 50%">
+              <img src="images/register.png" style="width: 100%" />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/index.js"></script>
+  <script>
+    $('#register').fadeOut(0);
+    function open_reg() {
+      $('#login').fadeOut(400);
+      $('#register').delay(400).fadeIn(400);
+    }
+    function open_login() {
+      $('#register').fadeOut(400);
+      $('#login').delay(400).fadeIn(400);
+    }
+  </script>
+
+</body>
+</html>
